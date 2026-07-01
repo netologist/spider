@@ -37,10 +37,11 @@ theme:
   icon:
     repo: fontawesome/brands/github
 
-# Mermaid diagrams render at build time via mkdocs-mermaid2-plugin.
+# Mermaid diagrams render via mkdocs-mermaid2-plugin (pinned mermaid@10).
 plugins:
   - search
-  - mermaid2
+  - mermaid2:
+      javascript: https://unpkg.com/mermaid@10/dist/mermaid.esm.min.mjs
 markdown_extensions:
   - admonition
   - pymdownx.details
