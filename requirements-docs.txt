@@ -1,0 +1,5 @@
+# MkDocs build dependencies for the SPIDER docs site.
+# Usage: pip install -r requirements-docs.txt  &&  mkdocs serve
+mkdocs>=1.6
+mkdocs-material>=9.5
+mkdocs-mermaid2-plugin>=1.1

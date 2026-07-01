@@ -1,0 +1,10 @@
+name: story-subagent
+skill: spider-execute
+isolated_context: false
+model_tier: mid-tier
+description: >-
+  Runs one user story in an isolated git worktree using spider-execute.
+  Supports parallel execution across stories — a faulty story does not
+  affect the others. Results are merged; review runs on the merged result.
+trigger: Selected by spider-execute when the execution mode is
+  'subagent + worktree' (one subagent per story)

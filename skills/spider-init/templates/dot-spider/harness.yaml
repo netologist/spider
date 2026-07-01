@@ -1,0 +1,89 @@
+# ----------------------------------------------------------------
+# SPIDER harness configuration. See the SPIDER documentation.
+# Models use a tier label (opus/mid/small); map each tier to a concrete
+# model id in your harness (e.g. claude-sonnet, gpt-4o-mini) before use.
+# ----------------------------------------------------------------
+
+model_matrix:
+  inception:
+    model: opus-tier
+    effort: high
+    mode: interactive
+  discovery:
+    model: opus-tier
+    effort: high
+    mode: semi-autonomous
+  research:
+    model: mid-tier
+    effort: low
+    mode: autonomous
+  innovate:
+    model: opus-tier
+    effort: high
+    mode: interactive
+  plan:
+    model: opus-tier
+    effort: high
+    mode: interactive
+    gate: 3
+  spike:
+    model: mid-tier
+    effort: low
+    mode: autonomous
+    timebox_min: 120
+  execute_red:
+    model: small-tier
+    effort: low
+    mode: autonomous
+  execute_green:
+    model: mid-tier
+    effort: low
+    mode: autonomous
+  execute_refactor:
+    model: mid-tier
+    effort: medium
+    mode: autonomous
+  debug:
+    model: opus-tier
+    effort: high
+    mode: autonomous
+    isolated_context: true
+  gate_checker:
+    model: opus-tier
+    effort: medium
+    mode: autonomous
+    isolated_context: true
+  review_spec:
+    model: opus-tier
+    effort: high
+    mode: autonomous
+    isolated_context: true
+  review_quality:
+    model: opus-tier
+    effort: medium
+    mode: autonomous
+    isolated_context: true
+  document:
+    model: small-tier
+    effort: low
+    mode: autonomous
+  retro:
+    model: mid-tier
+    effort: medium
+    mode: semi-autonomous
+
+gate_policy:
+  max_gate_retries: 3
+  retry_rule: same_failure_stops_immediately
+  distinct_failure_budget: 3
+
+automations:
+  daily-triage:
+    schedule: "cron: 0 9 * * *"
+    skill: spider-discovery
+    scope: [ci-failures, open-tech-debts, drift-log]
+    output: specs/triage-inbox/<date>.md
+    on_finding: >-
+      open worktree + story-subagent draft +
+      spec-compliance-review-agent check
+    on_empty: "auto-archive, no notification"

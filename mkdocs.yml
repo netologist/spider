@@ -1,0 +1,81 @@
+site_name: SPIDER Framework
+site_description: >-
+  A gate-enforced, spec-first, TDD-mandatory development
+  framework for AI coding agents.
+site_url: https://netologist.github.io/spider/
+repo_url: https://github.com/netologist/spider
+repo_name: netologist/spider
+edit_uri: edit/main/docs/
+
+docs_dir: docs
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.tracking
+    - content.code.copy
+    - content.code.annotate
+    - toc.follow
+  palette:
+    - scheme: default
+      primary: deep purple
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: deep purple
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  icon:
+    repo: fontawesome/brands/github
+
+# Mermaid diagrams render at build time via mkdocs-mermaid2-plugin.
+plugins:
+  - search
+  - mermaid2
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - Overview: overview.md
+  - The Flow: flow.md
+  - Directory Structure: structure.md
+  - Getting Started: getting-started.md
+  - Installation: installation.md
+  - Phases:
+      - phases/index.md
+      - Entry (Discovery & Inception): phases/entry.md
+      - Research: phases/research.md
+      - Innovate: phases/innovate.md
+      - Plan: phases/plan.md
+      - Spike: phases/spike.md
+      - Execute: phases/execute.md
+      - Review: phases/review.md
+      - Document: phases/document.md
+      - Retro: phases/retro.md
+  - Skills: skills.md
+  - Components: components.md
+  - Record Files: records.md
+  - Configuration: configuration.md
+  - Rules: rules.md
+  - Integrations: integrations.md
+  - Comparison: comparison.md

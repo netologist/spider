@@ -1,0 +1,14 @@
+{
+  "complexity_tier": "standard",
+  "approval_mode": "interactive",
+  "gate_policy": {
+    "max_gate_retries": 3,
+    "retry_rule": "same_failure_stops_immediately",
+    "distinct_failure_budget": 3
+  },
+  "review_policy": {
+    "trivial": { "spec_compliance_review": false, "code_quality_review": false },
+    "standard": { "spec_compliance_review": true, "code_quality_review": false },
+    "complex": { "spec_compliance_review": true, "code_quality_review": true }
+  }
+}

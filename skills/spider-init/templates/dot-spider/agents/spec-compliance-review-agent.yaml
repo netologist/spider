@@ -1,0 +1,10 @@
+name: spec-compliance-review-agent
+skill: null
+isolated_context: true
+model_tier: opus-tier
+description: >-
+  Review lens 1 — does the code match the approved spec? Checks every
+  acceptance criterion against the implementation: ✅ pass / ❌ fail /
+  ⚠️ attention. Independent assessment from the spec-authoring context.
+trigger: After Execute passes the Quality Gate, before the Review
+  phase is marked complete (only for standard/complex tiers)

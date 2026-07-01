@@ -1,0 +1,10 @@
+name: gate-checker-agent
+skill: null
+isolated_context: true
+model_tier: opus-tier
+description: >-
+  Evaluates the judgmental part of Gate 1/2/3 and the Quality Gate.
+  Maker ≠ checker — the agent that wrote the spec or code must not
+  approve its own work. Reads the gate checklist and the corresponding
+  phase outputs to produce a pass/fail verdict with reasoning.
+trigger: After a phase's mechanical gate check (hooks) passes

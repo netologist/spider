@@ -1,0 +1,13 @@
+name: retro-digest-agent
+skill: spider-retro
+isolated_context: true
+model_tier: mid-tier
+description: >-
+  Reads all sessions since the last retro, extracts learnings, patterns,
+  failures, and wins, and distills them into _LESSONS_LEARNED.md.
+  Applies the 'archive, not summarize' discipline (the handoff skill):
+  rejected alternatives, ordering decisions, and fine constraints are
+  carried forward before sessions are deleted. Runs in a context
+  separate from the one that wrote the sessions — a fresh eye asking
+  "what was left out?"
+trigger: During the Retro phase, to digest ephemeral sessions

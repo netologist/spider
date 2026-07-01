@@ -1,0 +1,11 @@
+name: code-quality-review-agent
+skill: codebase-design
+isolated_context: true
+model_tier: opus-tier
+description: >-
+  Review lens 2 — architecture, readability, and the deep-module
+  discipline. A different lens from spec compliance: evaluates whether
+  the code structure is sound, independent of whether acceptance
+  criteria pass.
+trigger: After spec-compliance review, in the same Review phase
+  (only for the complex tier)
