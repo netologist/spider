@@ -11,7 +11,6 @@ docs_dir: docs
 
 theme:
   name: material
-  # logo: assets/logo-small.png
   features:
     - navigation.tabs
     - navigation.sections
@@ -35,6 +34,7 @@ theme:
         icon: material/brightness-4
         name: Switch to light mode
   icon:
+    logo: material/spider
     repo: fontawesome/brands/github
 
 plugins:
@@ -61,6 +61,9 @@ markdown_extensions:
 # Mermaid.js v10 bundled locally — no plugin, no CDN.
 extra_javascript:
   - assets/mermaid.min.js
+
+extra_css:
+  - assets/extra.css
 
 nav:
   - Home: index.md
