@@ -18,7 +18,11 @@ jobs:
       - name: Build MkDocs
         run: mkdocs build
       - name: Smoke-test install.sh
-        run: bash install.sh --harness agents --scope global --dry-run \
+        run: >-
+          bash install.sh
+          --harness agents
+          --scope global
+          --dry-run
           --cache-dir "$GITHUB_WORKSPACE"
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4

@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/logo-small.png" alt="SPIDER" width="220">
+</p>
+
 # SPIDER
 
 > A **gate-enforced, spec-first, TDD-mandatory** development framework for AI coding agents.
@@ -39,6 +43,7 @@ spider/
 ├── install.sh                ← one-command installer (curl | bash)
 ├── mkdocs.yml                ← MkDocs site config
 ├── docs/                     ← this documentation site
+│   └── assets/               ← images, logo
 ├── skills/                   ← the 13 SPIDER skills (init + router + 11 phases)
 │   └── spider-init/templates/ ← scaffold templates (hooks, configs, spec seeds)
 └── requirements-docs.txt     ← MkDocs build dependencies

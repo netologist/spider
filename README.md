@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="docs/assets/logo-small.png" alt="SPIDER" width="200">
+</p>
+
 # 🕷️ SPIDER
 
 **A gate-enforced, spec-first, TDD-mandatory development framework for AI coding agents.**
@@ -105,6 +109,7 @@ spider/
 ├── install.sh                ← one-command installer (curl | bash)
 ├── mkdocs.yml                ← docs site config (Material + mermaid)
 ├── docs/                     ← the documentation site
+│   └── assets/               ← images, logo
 ├── skills/                   ← the 13 SPIDER skills
 │   ├── spider-init/
 │   │   └── templates/        ← scaffold: hooks, harness.yaml, config.json, spec seeds
