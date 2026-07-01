@@ -139,4 +139,4 @@ GitHub Actions):
 
 ## License
 
-TBD — add your license here.
+MIT © 2026 Hasan Ozgan — see [LICENSE](LICENSE)
