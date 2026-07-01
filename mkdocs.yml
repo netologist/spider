@@ -11,7 +11,7 @@ docs_dir: docs
 
 theme:
   name: material
-  logo: assets/logo-small.png
+  # logo: assets/logo-small.png
   features:
     - navigation.tabs
     - navigation.sections
@@ -37,15 +37,17 @@ theme:
   icon:
     repo: fontawesome/brands/github
 
-# Mermaid diagrams render via mkdocs-mermaid2-plugin (pinned mermaid@10).
 plugins:
   - search
-  - mermaid2:
-      javascript: https://unpkg.com/mermaid@10/dist/mermaid.esm.min.mjs
+
 markdown_extensions:
   - admonition
   - pymdownx.details
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.tasklist:
@@ -55,6 +57,10 @@ markdown_extensions:
   - tables
   - toc:
       permalink: true
+
+# Mermaid.js v10 bundled locally — no plugin, no CDN.
+extra_javascript:
+  - assets/mermaid.min.js
 
 nav:
   - Home: index.md
